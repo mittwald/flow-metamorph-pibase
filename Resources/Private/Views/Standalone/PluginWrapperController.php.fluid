@@ -1,0 +1,31 @@
+{namespace morph=Mw\MetamorphPibase\ViewHelpers}
+<?php
+namespace {controller.namespace};
+
+use Mw\T3Compat\Plugin\PluginWrapper;
+use TYPO3\Flow\Mvc\Controller\ActionController;
+use {plugin.fullyQualifiedName};
+
+class {controller.relativeName} extends ActionController {
+
+    /**
+     * @var PluginWrapper
+     * @Flow\Inject
+     */
+    protected $pluginWrapper;
+
+    /**
+     * @var {plugin.relativeName}
+     * @Flow\Inject
+     */
+    protected $plugin;
+
+    public function indexAction() {
+        $configuration = {configuration -> morph:varExport()};
+
+        $this->pluginWrapper->setControllerContext($this->controllerContext);
+        $pluginContent = $this->pluginWrapper->wrapPlugin($this->plugin, $configuration);
+        $this->view->assign('pluginContent', $pluginContent);
+    }
+
+}

@@ -1,0 +1,26 @@
+Mw:
+  Metamorph:
+
+    transformations:
+      pluginInventory:
+        name: Mw\MetamorphPibase\Step\PluginInventory
+        dependsOn:
+          - analyzeClasses
+
+      wrapPibasePlugins:
+        name: Mw\MetamorphPibase\Step\WrapPibasePlugins
+        dependsOn:
+          - pluginInventory
+          - refactorClasses
+
+    facts:
+      isPibasePlugin:
+        expr: |
+          inherits('TYPO3\\CMS\\Frontend\\Plugin\\AbstractPlugin') ||
+          inherits('tslib_pibase')
+
+    containers:
+      plugins:
+        class: Mw\MetamorphPibase\Domain\Model\State\PluginMappingContainer
+        proxy: Mw\MetamorphPibase\Persistence\Mapping\State\PluginMappingContainerProxy
+        writer: Mw\MetamorphPibase\Persistence\Mapping\State\PluginMappingContainerWriter

@@ -1,0 +1,15 @@
+{
+    "name": "mittwald-typo3/flow-metamorph-pibase",
+    "type": "typo3-flow-package",
+    "description": "Convert TYPO3 pibase extensions into TYPO3 Flow packages",
+    "require": {
+        "typo3/flow": "*",
+        "typo3/fluid": "*",
+        "mittwald-typo3/flow-metamorph": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mw\\MetamorphPibase": "Classes"
+        }
+    }
+}
