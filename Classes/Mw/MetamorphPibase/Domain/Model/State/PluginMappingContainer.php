@@ -2,6 +2,7 @@
 namespace Mw\MetamorphPibase\Domain\Model\State;
 
 use Mw\Metamorph\Domain\Model\State\Reviewable;
+use Mw\Metamorph\Domain\Model\State\ReviewableTrait;
 use TYPO3\Flow\Annotations as Flow;
 
 /**
@@ -10,9 +11,9 @@ use TYPO3\Flow\Annotations as Flow;
  *
  * @Flow\Scope("prototype")
  */
-class PluginMappingContainer {
+class PluginMappingContainer implements Reviewable {
 
-	use Reviewable;
+	use ReviewableTrait;
 
 	/**
 	 * @var array<\Mw\MetamorphPibase\Domain\Model\State\PluginMapping>
