@@ -1,0 +1,27 @@
+= Metamorph (pibase extension) - TYPO3 CMS to TYPO3 Flow converter
+Martin Helmich <m.helmich@mittwald.de>
+2015-01-19
+:source-highlighter: coderay
+:icons: font
+:toc:
+
+CAUTION: This package is currently unter heavy development and by no means
+stable! APIs and behaviour can change at any point without notice.
+
+== Synopsis
+
+This is an extension of the http://github.com/mittwald/flow-metamorph[Mw.Metamorph]
+package that allows a migration of TYPO3 pibase extensions to TYPO3 Flow.
+
+== Installation
+
+Require this package using composer:
+
+[source,json]
+----
+{
+    "require": {
+        "mittwald-typo3/flow-metamorph-pibase": "*"
+    }
+}
+----
