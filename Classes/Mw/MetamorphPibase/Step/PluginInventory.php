@@ -53,6 +53,10 @@ class PluginInventory extends AbstractTransformation {
 
 		$controllerClass = str_replace('Plugin', 'Controller', $pluginClass->getFullyQualifiedName());
 
+		if (substr($controllerClass, -10) !== 'Controller') {
+			$controllerClass .= 'Controller';
+		}
+
 		if (strstr($controllerClass, $controllerNamespace) === FALSE) {
 			$controllerClass = str_replace($namespace, $controllerNamespace, $controllerClass);
 		}
