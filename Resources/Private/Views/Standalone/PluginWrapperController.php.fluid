@@ -4,6 +4,7 @@ namespace {controller.namespace};
 
 use Mw\T3Compat\Plugin\PluginWrapper;
 use TYPO3\Flow\Mvc\Controller\ActionController;
+use TYPO3\Flow\Annotations as Flow;
 use {plugin.fullyQualifiedName};
 
 class {controller.relativeName} extends ActionController {
