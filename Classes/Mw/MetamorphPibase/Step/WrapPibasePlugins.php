@@ -13,7 +13,7 @@ use TYPO3\Flow\Package\PackageManagerInterface;
 use TYPO3\Fluid\View\StandaloneView;
 
 /**
- * Class WrapPibasePlugins
+ * Special step class that creates a wrapping controller for each migrated plugin.
  *
  * @package Mw\MetamorphPibase
  * @subpackage Step

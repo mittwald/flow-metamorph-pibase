@@ -8,7 +8,16 @@ use TYPO3\Flow\Annotations as Flow;
 use TYPO3\Flow\Aop\JoinPointInterface;
 
 /**
- * @package    Mw\Metamorph
+ * Aspect that asserts that the pibase plugin mapping is reviewed before a
+ * migration step that requires it is executed.
+ *
+ * Note that this aspect works the other way than Metamorph's base
+ * `ReviewAssertionAspect` class. There, class/package review is mandatory and
+ * can be skipped with appropriate annotations. Since this package is itself
+ * an extension to Metamorph, review of the plugin mapping cannot be mandatory
+ * for all steps.
+ *
+ * @package    Mw\MetamorphPibase
  * @subpackage Domain\Aspect
  *
  * @Flow\Aspect
