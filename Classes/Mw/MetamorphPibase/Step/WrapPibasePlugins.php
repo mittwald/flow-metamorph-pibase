@@ -7,10 +7,19 @@ use Mw\Metamorph\Domain\Model\MorphConfiguration;
 use Mw\Metamorph\Domain\Service\MorphExecutionState;
 use Mw\Metamorph\Transformation\AbstractTransformation;
 use Mw\MetamorphPibase\Domain\Model\PibaseCapableMorphConfigurationInterface;
+use Mw\MetamorphPibase\Annotations as MetamorphPibase;
 use TYPO3\Flow\Annotations as Flow;
 use TYPO3\Flow\Package\PackageManagerInterface;
 use TYPO3\Fluid\View\StandaloneView;
 
+/**
+ * Class WrapPibasePlugins
+ *
+ * @package Mw\MetamorphPibase
+ * @subpackage Step
+ *
+ * @MetamorphPibase\RequirePluginReview
+ */
 class WrapPibasePlugins extends AbstractTransformation {
 
 	/**
